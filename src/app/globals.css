@@ -1,26 +1,69 @@
 @import "tailwindcss";
 
+@theme {
+  --font-sans: var(--font-plus-jakarta);
+  
+  /* Neo-Precision Theme Variables */
+  --color-surface: #121508;
+  --color-on-surface: #e2e4cf;
+  --color-surface-container: #1e2113;
+  --color-surface-container-low: #1a1d10;
+  --color-on-surface-variant: #c5c9ac;
+  --color-primary: #ffffff;
+  --color-on-primary: #2a3400;
+  --color-primary-fixed: #caf300;
+  --color-primary-fixed-dim: #b0d500;
+  --color-on-primary-fixed: #171e00;
+  --color-secondary: #b9c8de;
+  --color-error: #ffb4ab;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Let's define the base colors for our app logic */
+  --background: #121508;
+  --foreground: #e2e4cf;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-surface);
+  color: var(--color-on-surface);
+  font-family: var(--font-sans), sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Glass & Neon UI Components */
+.glass-panel {
+  background: rgba(26, 26, 26, 0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.cyber-glow-hover:hover {
+  box-shadow: 0 0 20px rgba(176, 213, 0, 0.15);
+  border-color: rgba(176, 213, 0, 0.3);
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.02);
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(176, 213, 0, 0.2);
+  border-radius: 10px;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+@keyframes subtle-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+.animate-pulse-slow {
+  animation: subtle-pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
