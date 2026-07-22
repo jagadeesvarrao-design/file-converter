@@ -64,7 +64,7 @@ export default function Home() {
         }
         const baseURL = 'https://unpkg.com/@ffmpeg/core@0.12.6/dist/umd';
         const ffmpeg = ffmpegRef.current;
-        ffmpeg.on('log', ({ message }) => console.log('FFmpeg:', message));
+        ffmpeg.on('log', ({ message }: { message: string }) => console.log('FFmpeg:', message));
         
         await ffmpeg.load({
           coreURL: await toBlobURL(`${baseURL}/ffmpeg-core.js`, 'text/javascript'),
@@ -151,7 +151,7 @@ export default function Home() {
     await ffmpeg.exec(args);
     const data = await ffmpeg.readFile(outputName);
     const mimeType = isVideoOut ? `video/${targetExt}` : `audio/${targetExt}`;
-    const blob = new Blob([(data as Uint8Array).buffer], { type: mimeType });
+    const blob = new Blob([data as any], { type: mimeType });
     return URL.createObjectURL(blob);
   };
 
