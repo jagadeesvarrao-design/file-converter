@@ -1,36 +1,91 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ⚡ Converta — The Future of File Precision
 
-## Getting Started
+Converta is an ultra-modern, high-performance, in-browser and server-less file conversion platform. Built using Next.js 15, Tailwind CSS v4, and WebAssembly, Converta offers lightning-fast, high-precision format conversions with zero quality loss and absolute privacy.
 
-First, run the development server:
+Designed with a premium **Neo-Precision** aesthetic, the application features an elegant glassmorphism dark theme, cyber-lime glowing accents, and a smooth, interactive dashboard interface.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## ✨ Features
+
+- **⚡ WASM-Accelerated local conversions:** Convert smaller media files directly in your browser using client-side WebAssembly, ensuring 100% data privacy.
+- **🛡️ Secure Cloud Processing:** Larger files are routed through private, secure APIs for maximum speed and scale.
+- **🎨 Neo-Precision UI:** A cutting-edge dark theme with glassmorphic cards, custom cyber-lime glowing states, dynamic animations via Framer Motion, and high-fidelity typography.
+- **📁 Multi-Format Support:**
+  - **Images:** PNG, JPG, WEBP, TIFF, etc.
+  - **Video:** MP4, WEBM, MKV, etc.
+  - **Audio:** WAV, FLAC, AAC, MP3, etc.
+  - **Documents:** PDF, TXT, DOCX, MD, etc.
+- **📊 Real-time Conversion Tracker:** Interactive sidebar showing recent activity, progress bars, and status updates (Pending, Active, Completed).
+- **🖱️ Smooth UI UX Flow:** Dynamic action cards designed to smoothly scroll and navigate the user to the interactive drag-and-drop zone.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Framework:** [Next.js](https://nextjs.org/) (App Router, Turbopack)
+- **Styling:** [Tailwind CSS v4](https://tailwindcss.com/)
+- **Animation:** [Framer Motion](https://www.framer.com/motion/)
+- **Media Engine:** [FFmpeg WASM](https://ffmpegwasm.netlify.app/)
+- **Icons:** Material Symbols
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js (v18.x or higher)
+- npm, yarn, or pnpm
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/jagadeesvarrao-design/file-converter.git
+   cd file-converter
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Run the development server:
+   ```bash
+   npm run dev
+   ```
+
+4. Open your browser and navigate to `http://localhost:3000` (or `http://localhost:3001` if port 3000 is occupied).
+
+---
+
+## 🏗️ Project Structure
+
+```
+├── public/                 # Static assets
+└── src/
+    ├── app/
+    │   ├── api/            # Serverless conversion API endpoints
+    │   ├── dashboard/      # Conversion dashboard application
+    │   ├── globals.css     # Global styles & Neo-Precision Tailwind variables
+    │   ├── layout.tsx      # App-wide layout with font loading
+    │   └── page.tsx        # High-fidelity landing page
+    └── components/         # Reusable dashboard UI components
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🌐 Deployment to Vercel
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+To deploy your own instance of Converta:
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Install the Vercel CLI:
+   ```bash
+   npm install -g vercel
+   ```
+2. Log in and deploy:
+   ```bash
+   vercel
+   ```
+3. Follow the CLI wizard to link the repository and complete your deployment.
