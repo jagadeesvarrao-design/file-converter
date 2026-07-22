@@ -67,19 +67,7 @@ export default function LandingPage() {
 
         </section>
 
-        {/* Social Proof */}
-        <section className="w-full max-w-5xl mx-auto px-6 py-12 border-y border-surface-container-high/30 mb-20">
-          <p className="text-center text-[10px] font-bold tracking-[0.2em] text-on-surface-variant uppercase mb-8">
-            Trusted by 10k+ Creators
-          </p>
-          <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-8 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
-            <div className="flex items-center gap-2 font-bold text-xl tracking-wider"><span className="material-symbols-outlined">change_history</span> NEXUS</div>
-            <div className="flex items-center gap-2 font-bold text-xl tracking-wider"><span className="material-symbols-outlined">donut_large</span> ORBITAL</div>
-            <div className="flex items-center gap-2 font-bold text-xl tracking-wider"><span className="material-symbols-outlined">grid_view</span> MATRIX</div>
-            <div className="flex items-center gap-2 font-bold text-xl tracking-wider"><span className="material-symbols-outlined">hub</span> SYNAPSE</div>
-            <div className="flex items-center gap-2 font-bold text-xl tracking-wider"><span className="material-symbols-outlined">deployed_code</span> QUANTUM</div>
-          </div>
-        </section>
+
 
         {/* Features Grid */}
         <section className="w-full max-w-7xl mx-auto px-6 mb-24">

@@ -222,8 +222,6 @@ export default function Home() {
         <div className="hidden md:flex gap-6 items-center">
           <nav className="flex gap-4">
             <a className="text-[12px] font-bold tracking-widest text-primary-fixed-dim hover:bg-white/5 transition-colors px-2 py-1 rounded" href="#">DASHBOARD</a>
-            <a className="text-[12px] font-bold tracking-widest text-on-surface-variant hover:bg-white/5 transition-colors px-2 py-1 rounded" href="#">SOLUTIONS</a>
-            <a className="text-[12px] font-bold tracking-widest text-on-surface-variant hover:bg-white/5 transition-colors px-2 py-1 rounded" href="#">API</a>
           </nav>
         </div>
       </header>
