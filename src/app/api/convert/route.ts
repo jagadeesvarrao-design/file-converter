@@ -37,7 +37,7 @@ export async function POST(req: Request) {
           return NextResponse.json({ error: 'Unsupported target format for images' }, { status: 400 });
       }
 
-      return new NextResponse(new Uint8Array(outputBuffer), {
+      return new NextResponse(new Blob([outputBuffer]), {
         headers: {
           'Content-Type': `image/${targetFormat === 'jpg' ? 'jpeg' : targetFormat}`,
           'Content-Disposition': `attachment; filename="converted_${fileName.split('.')[0]}.${targetFormat}"`,
@@ -73,7 +73,7 @@ export async function POST(req: Request) {
 
       const pdfBytes = await pdfDoc.save();
       
-      return new NextResponse(pdfBytes, {
+      return new NextResponse(new Blob([pdfBytes]), {
         headers: {
           'Content-Type': 'application/pdf',
           'Content-Disposition': `attachment; filename="converted_${fileName.split('.')[0]}.pdf"`,
@@ -107,7 +107,7 @@ export async function POST(req: Request) {
       page.drawImage(image, { x: 0, y: 0, width: image.width, height: image.height });
 
       const pdfBytes = await pdfDoc.save();
-      return new NextResponse(pdfBytes, {
+      return new NextResponse(new Blob([pdfBytes]), {
         headers: {
           'Content-Type': 'application/pdf',
           'Content-Disposition': `attachment; filename="converted_${fileName.split('.')[0]}.pdf"`,
