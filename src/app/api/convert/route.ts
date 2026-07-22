@@ -37,7 +37,7 @@ export async function POST(req: Request) {
           return NextResponse.json({ error: 'Unsupported target format for images' }, { status: 400 });
       }
 
-      return new NextResponse(outputBuffer, {
+      return new NextResponse(new Uint8Array(outputBuffer), {
         headers: {
           'Content-Type': `image/${targetFormat === 'jpg' ? 'jpeg' : targetFormat}`,
           'Content-Disposition': `attachment; filename="converted_${fileName.split('.')[0]}.${targetFormat}"`,
